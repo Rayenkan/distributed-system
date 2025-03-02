@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package calculator;
+
+// The Calculator service definition
+service Calculator {
+  // Add two numbers
+  rpc Add (AddRequest) returns (AddResponse) {}
+}
+
+// The request message containing two numbers
+message AddRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+// The response message containing the result
+message AddResponse {
+  int32 result = 1;
+}
+
